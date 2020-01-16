@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+$for(author-meta)$
+<meta name="author" content="$author-meta$">
+$endfor$
+$if(subtitle)$
+<meta name="description" content="$subtitle$">
+$endif$
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/site-icon-32.png">
+$for(css)$
+<link rel="stylesheet" href="$css$">
+$endfor$
+$if(highlighting-css)$
+<style>
+$highlighting-css$
+</style>
+$endif$
+<style>
+body {font-family: Caladea, Cambria, Tinos, "Times New Roman", serif;}
+table {font-family: Carlito, Calibri, Arimo, Arial, sans-serif;}
+header, nav  {text-align: center;}
+nav > ul {padding: 0; list-style-type: none;}
+nav > ul > li {display: inline; padding-left: 2ch;}
+nav > ul > li:first-child {padding-left: 0}
+table {width: auto;}
+@media (prefers-color-scheme: dark) {
+  code.sourceCode > span {color: #00417a; filter: invert(100%);}
+  header > img {filter: invert(100%);}
+}
+</style>
+<title>$pagetitle$ – $if(title-suffix)$$title-suffix$$endif$</title>
+</head>
+<body>
+<header><img src="images/status6.svg" width="550" height="86" alt="STATUS:6"></header>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">About</a></li>
+</ul>
+</nav>
+<main>
+$body$
+</main>
+<footer>Copyright © 2020 John Neffenger</footer>
+</body>
+</html>
