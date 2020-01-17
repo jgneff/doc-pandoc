@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="author" content="John Neffenger">
-<meta name="description" content="Status Six Communications is the sole proprietorship of John Neffenger.">
+<meta name="description" content="John Neffenger, doing business as Status Six Communications">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="images/site-icon-32.png">
 <link rel="stylesheet" href="styles/light.min.css">
+<link rel="canonical" href="https://www.status6.com/">
 <style>
 code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -67,9 +68,9 @@ code span.va { } /* Variable */
 code span.vs { color: #008080; } /* VerbatimString */
 code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </style>
+
 <style>
-body {font-family: Caladea, Cambria, Tinos, "Times New Roman", serif;}
-table {font-family: Carlito, Calibri, Arimo, Arial, sans-serif;}
+body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arimo, "Liberation Sans", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;}
 header, nav  {text-align: center;}
 nav > ul {padding: 0; list-style-type: none;}
 nav > ul > li {display: inline; padding-left: 2ch;}
@@ -77,18 +78,25 @@ nav > ul > li:first-child {padding-left: 0}
 table {width: auto;}
 @media (prefers-color-scheme: dark) {
   code.sourceCode > span {color: #00417a; filter: invert(100%);}
-  header > img {filter: invert(100%);}
+  header img {filter: invert(100%);}
 }
 </style>
 <title>Home – STATUS:6</title>
+
+<style>
+ td.tidy4 {text-align: right;}
+ td.tidy3 {text-align: center;}
+ th.tidy2 {text-align: right;}
+ th.tidy1 {text-align: center;}
+</style>
 </head>
 <body>
-<header><img src="images/status6.svg" width="550" height="86" alt="STATUS:6"></header>
+<header><a href="index.html"><img src="images/status6.svg" width="550" height="86" alt="STATUS:6"></a></header>
 <nav>
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Contact</a></li>
-<li><a href="#">About</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="example.html">Example</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
 <main>
@@ -96,51 +104,53 @@ table {width: auto;}
 <p>This section lists my projects.</p>
 <h2 id="source">Source</h2>
 <p>This is the source code of a Java program:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">public</span> <span class="kw">class</span> HelloWorldApp {</span>
+<div class="sourceCode" id="cb1">
+<pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">public</span> <span class="kw">class</span> HelloWorldApp {</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
 <span id="cb1-3"><a href="#cb1-3"></a>        <span class="co">// Prints the string to the console</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;Hello World!&quot;</span>);</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">"Hello World!"</span>);</span>
 <span id="cb1-5"><a href="#cb1-5"></a>    }</span>
 <span id="cb1-6"><a href="#cb1-6"></a>}</span></code></pre></div>
 <p>This is a fragment of HTML source code:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">&lt;!-- Fleurons are stylized flowers. --&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">&lt;img</span><span class="ot"> class=</span><span class="st">&quot;fleuron&quot;</span><span class="ot"> src=</span><span class="st">&quot;images/fleuron.svg&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="ot">    width=</span><span class="st">&quot;45&quot;</span><span class="ot"> height=</span><span class="st">&quot;16&quot;</span><span class="ot"> alt=</span><span class="st">&quot;* * *&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb2">
+<pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">&lt;!-- Fleurons are stylized flowers. --&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">"center"</span><span class="kw">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">&lt;img</span><span class="ot"> class=</span><span class="st">"fleuron"</span><span class="ot"> src=</span><span class="st">"images/fleuron.svg"</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="ot">    width=</span><span class="st">"45"</span><span class="ot"> height=</span><span class="st">"16"</span><span class="ot"> alt=</span><span class="st">"* * *"</span><span class="kw">&gt;</span></span>
 <span id="cb2-5"><a href="#cb2-5"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 <p>The statement <code>System.out.println("Hello World!");</code> prints to the console.</p>
 <p>Here is a nice table about Ubuntu Long Term Releases.</p>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Ubuntu Release</th>
-<th style="text-align: center;">Minimum Kernel</th>
-<th style="text-align: center;">C Library</th>
-<th style="text-align: right;">Size (MB)</th>
-<th style="text-align: right;">Packages</th>
+<th class="tidy1">Ubuntu Release</th>
+<th class="tidy1">Minimum Kernel</th>
+<th class="tidy1">C Library</th>
+<th class="tidy2">Size (MB)</th>
+<th class="tidy2">Packages</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">14.04 LTS</td>
-<td style="text-align: center;">2.6.32</td>
-<td style="text-align: center;">2.19</td>
-<td style="text-align: right;">190</td>
-<td style="text-align: right;">46,273</td>
+<td class="tidy3">14.04 LTS</td>
+<td class="tidy3">2.6.32</td>
+<td class="tidy3">2.19</td>
+<td class="tidy4">190</td>
+<td class="tidy4">46,273</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>16.04 LTS</strong></td>
-<td style="text-align: center;">3.2.0</td>
-<td style="text-align: center;">2.23</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">54,520</td>
+<td class="tidy3"><strong>16.04 LTS</strong></td>
+<td class="tidy3">3.2.0</td>
+<td class="tidy3">2.23</td>
+<td class="tidy4">109</td>
+<td class="tidy4">54,520</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><strong>18.04 LTS</strong></td>
-<td style="text-align: center;">3.2.0</td>
-<td style="text-align: center;">2.27</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">59,624</td>
+<td class="tidy3"><strong>18.04 LTS</strong></td>
+<td class="tidy3">3.2.0</td>
+<td class="tidy3">2.27</td>
+<td class="tidy4">55</td>
+<td class="tidy4">59,624</td>
 </tr>
 </tbody>
 </table>
