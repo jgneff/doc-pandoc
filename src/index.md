@@ -1,10 +1,9 @@
 ---
 title: Home
 author: John Neffenger
-date: 2020-01-17
 keywords: [status6, sole, proprietorship]
 subject: John Neffenger, doing business as Status Six Communications
-canonical: https://www.status6.com/
+canonical: https://www.example.com/
 ---
 ## Projects
 

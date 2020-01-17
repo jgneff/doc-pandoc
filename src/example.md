@@ -1,10 +1,9 @@
 ---
 title: Example
 author: John Neffenger
-date: 2020-01-17
 keywords: [markdown, example, wikipedia]
 subject: Example page from Wikipedia
-canonical: https://www.status6.com/example.html
+canonical: https://www.example.com/example.html
 ---
 Heading
 =======
