@@ -41,7 +41,7 @@ Numbered list:
 
 An [example](https://example.com).
 
-![Image](https://placekitten.com/408/287 "kitten")
+![Image](images/Icon-pictures.png "icon")
 
 > Markdown uses email-style > characters for blockquoting.
 

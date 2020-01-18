@@ -1,8 +1,8 @@
 ---
 title: Home
 author: John Neffenger
-keywords: [status6, sole, proprietorship]
-subject: John Neffenger, doing business as Status Six Communications
+keywords: [example, markdown, pandoc]
+subject: Example page generated from Markdown by Pandoc
 canonical: https://www.example.com/
 ---
 ## Projects

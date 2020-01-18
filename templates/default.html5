@@ -10,7 +10,7 @@ $if(subject)$
 <meta name="description" content="$subject$">
 $endif$
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="images/site-icon-32.png">
+<link rel="icon" type="image/png" href="images/icon.png">
 $if(highlighting-css)$
 <style>
 $highlighting-css$
@@ -33,11 +33,11 @@ table {width: auto;}
   header img {filter: invert(100%);}
 }
 </style>
-<title>$title$ – STATUS:6</title>
+<title>$title$ – Example</title>
 </head>
 <body>
 <header>
-<a href="index.html"><img src="images/status6.svg" width="550" height="86" alt="STATUS:6"></a>
+<a href="index.html"><img src="images/example.svg" width="601" height="85" alt="Example"></a>
 </header>
 <nav>
 <ul>
@@ -50,7 +50,9 @@ table {width: auto;}
 $body$
 </main>
 <footer>
-Copyright © 2020 John Neffenger. STATUS:6 is a registered trademark of John Neffenger. Check <a href="https://validator.w3.org/check?uri=referer" title="W3C Markup Validation Service">HTML</a>.
+This page was generated from Markdown by <a href="https://pandoc.org/">Pandoc</a>.
+Validate the <a href="https://validator.w3.org/check?uri=referer" title="W3C Markup Validation Service">HTML</a>.
+Get the source on <a href="https://github.com/jgneff/doc-pandoc" title="GitHub Pages with Pandoc">GitHub</a>.
 </footer>
 </body>
 </html>
