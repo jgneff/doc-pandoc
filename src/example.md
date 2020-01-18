@@ -3,7 +3,7 @@ title: Example
 author: John Neffenger
 keywords: [markdown, example, wikipedia]
 subject: Example page from Wikipedia
-canonical: https://www.example.com/example.html
+canonical: https://jgneff.github.io/doc-pandoc/example.html
 ---
 Heading
 =======

@@ -3,7 +3,7 @@ title: Home
 author: John Neffenger
 keywords: [example, markdown, pandoc]
 subject: Example page generated from Markdown by Pandoc
-canonical: https://www.example.com/
+canonical: https://jgneff.github.io/doc-pandoc/
 ---
 ## Projects
 
