@@ -3,10 +3,11 @@
 # ======================================================================
 
 # Commands
-PANDOC = $(HOME)/opt/pandoc-2.7.3/bin/pandoc
-TIDY   = $(HOME)/opt/tidy-html5-5.7.27/bin/tidy
-SED    = sed
-QPDF   = qpdf
+PANDOC   = $(HOME)/opt/pandoc-2.9.2/bin/pandoc
+TIDY     = $(HOME)/opt/tidy-html5-5.7.27/bin/tidy
+SED      = sed
+QPDF     = qpdf
+COMPRESS = yui-compressor
 
 # Markdown flavor and syntax highlighting style
 flavor = markdown-implicit_figures-fancy_lists
@@ -65,7 +66,11 @@ docs/%.txt: %.md
 
 .PHONY: all clean
 
-all: $(files)
+all: $(files) docs/styles/style.css
+
+docs/styles/style.css: custom.css site.css
+	$(COMPRESS) $^ > $@
+	$(COMPRESS) $(word 2,$^) >> $@
 
 clean:
-	rm -f docs/*.*
+	rm -f docs/*.* docs/styles/style.css

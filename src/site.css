@@ -1,0 +1,14 @@
+/**
+ * Site-specific styles
+ */
+
+@media (prefers-color-scheme: dark) {
+  header > a > img {
+    filter: invert(1);
+  }
+
+  code.sourceCode > span {
+    filter: invert(1);  /* Inverts colors of syntax highlighting */
+    color: #00417a; /* Resets default color */
+  }
+}

@@ -9,31 +9,16 @@ $endfor$
 $if(subject)$
 <meta name="description" content="$subject$">
 $endif$
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="images/icon.png">
+<link rel="canonical" href="$canonical$">
 $if(highlighting-css)$
 <style>
 $highlighting-css$
 </style>
 $endif$
 <link rel="stylesheet" href="styles/light.min.css">
-<link rel="canonical" href="$canonical$">
-<style>
-:root {--text-muted: #767676;} /* Lighthouse audit */
-body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arimo, "Liberation Sans", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;}
-code, samp, time, var, kbd {font-family: Consolas, "DejaVu Sans Mono", "Liberation Mono", Menlo, monospace; font-size: 0.85em;}
-pre {font-size: unset;} /* Fix for Microsoft EdgeHTML 18 */
-header, nav  {text-align: center;}
-nav > ul {padding: 0; list-style-type: none;}
-nav > ul > li {display: inline; padding-left: 2ch;}
-nav > ul > li:first-child {padding-left: 0}
-table {width: auto;}
-.sourceCode {overflow-x: auto;}
-@media (prefers-color-scheme: dark) {
-  code.sourceCode > span {color: #00417a; filter: invert(100%);}
-  header img {filter: invert(100%);}
-}
-</style>
+<link rel="stylesheet" href="styles/style.css">
 <title>$title$ – Example</title>
 </head>
 <body>
@@ -51,10 +36,12 @@ table {width: auto;}
 $body$
 </main>
 <footer>
+<p>
 This page was generated from Markdown by <a href="https://pandoc.org/">Pandoc</a>
-and styled by <a href="https://github.com/kognise/water.css" title="">Water.css</a>.
-Validate the <a href="https://validator.w3.org/check?uri=referer" title="W3C Markup Validation Service">HTML</a>.
-Get the source on <a href="https://github.com/jgneff/doc-pandoc" title="GitHub Pages with Pandoc">GitHub</a>.
+and styled by <a href="https://github.com/kognise/water.css">Water.css</a>.
+Validate the <a href="https://validator.w3.org/check?uri=referer">HTML</a>.
+Get the source on <a href="https://github.com/jgneff/doc-pandoc">GitHub</a>.
+</p>
 </footer>
 </body>
 </html>
