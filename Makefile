@@ -3,23 +3,24 @@
 # ======================================================================
 
 # Commands
-PANDOC   = $(HOME)/opt/pandoc-2.9.2/bin/pandoc
-TIDY     = $(HOME)/opt/tidy-html5-5.7.27/bin/tidy
+PANDOC   = $(HOME)/opt/pandoc-2.11.0.4/bin/pandoc
+TIDY     = tidy
 SED      = sed
 QPDF     = qpdf
 COMPRESS = yui-compressor
 
 # Markdown flavor and syntax highlighting style
 flavor = markdown-implicit_figures-fancy_lists
-style = haddock
+syntax = haddock
 
 # Command options
-PANDOC_FLAGS = --from=$(flavor) --highlight-style=$(style)
-QPDF_FLAGS   = --linearize
+PANDOC_FLAGS = --data-dir=pandoc --standalone --from=$(flavor) \
+    --highlight-style=$(syntax)
+QPDF_FLAGS = --linearize --deterministic-id
 
 # Options affecting specific writers
-html5 = --to=html5 --template=templates/default
-latex = --to=latex
+html5 = --to=html5
+latex = --to=latex --resource-path=docs
 plain = --to=plain
 
 # HTML Tidy options
@@ -34,30 +35,28 @@ tidy_html = --quiet yes --force-output yes --tidy-mark no --wrap 0 \
 sed_type = 's/<style type="text\/css">/<style>/'
 sed_html = -e $(sed_type)
 
-# List of files to build
-files = \
-    $(addprefix docs/index.,pdf html txt) \
-    $(addprefix docs/example.,pdf html txt)
+# List of targets
+targets = $(addprefix docs/,styles/style.css \
+    $(addprefix index,.pdf .html .txt) \
+    $(addprefix example,.pdf .html .txt))
 
 # ======================================================================
 # Pattern Rules
 # ======================================================================
 
-VPATH = src:templates
-
-%.html: %.md default.html5
+%.html: src/%.md pandoc/templates/default.html5
 	$(PANDOC) $(PANDOC_FLAGS) $(html5) --output=$@ $<
 
 docs/%.html: %.html
 	$(TIDY) $(tidy_html) $< | $(SED) $(sed_html) > $@
 
-%.pdf: %.md
+%.pdf: src/%.md pandoc/templates/default.latex
 	$(PANDOC) $(PANDOC_FLAGS) $(latex) --output=$@ $<
 
 docs/%.pdf: %.pdf
 	$(QPDF) $(QPDF_FLAGS) $< $@
 
-docs/%.txt: %.md
+docs/%.txt: src/%.md
 	$(PANDOC) $(PANDOC_FLAGS) $(plain) --output=$@ $<
 
 # ======================================================================
@@ -66,10 +65,10 @@ docs/%.txt: %.md
 
 .PHONY: all clean
 
-all: $(files) docs/styles/style.css
+all: $(targets)
 
-docs/styles/style.css: custom.css site.css
-	$(COMPRESS) $^ > $@
+docs/styles/style.css: src/custom.css src/site.css
+	$(COMPRESS) $< > $@
 	$(COMPRESS) $(word 2,$^) >> $@
 
 clean:
